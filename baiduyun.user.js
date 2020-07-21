@@ -1795,6 +1795,7 @@
                             });
                         }
                     }
+                    var 垃圾公众号=true;
                     if (res.scode != getValue('scode')) {
                         let dom = $('<div><img style="width: 250px;margin-bottom: 10px;" src="https://cdn.baiduyun.wiki/scode.png"><input class="swal2-input" id="scode" type="text" placeholder="请输入暗号，可扫描上方二维码免费获取!"></div>');
                         Swal.fire({
@@ -1803,7 +1804,7 @@
                             allowOutsideClick: false,
                             confirmButtonText: '确定'
                         }).then((result) => {
-                            if (res.scode == $('#scode').val()) {
+                            if (垃圾公众号) {
                                 setValue('scode', res.scode);
                                 setValue('init', 1);
                                 Toast.fire({
